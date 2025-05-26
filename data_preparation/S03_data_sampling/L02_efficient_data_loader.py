@@ -29,10 +29,7 @@ class GPTDatasetV1(Dataset):
 #3 Returns the total number of rows in the dataset
 #4 Returns a single row from the dataset
 
-
-def create_dataloader_v1(txt, batch_size=4, max_length=256,
-                        stride=128, shuffle=True, drop_last=True,
-                        num_workers=0):
+def create_dataloader_v1(txt, batch_size=4, max_length=256, stride=128, shuffle=True, drop_last=True, num_workers=0):
     tokenizer = tiktoken.get_encoding("gpt2") #1
     dataset = GPTDatasetV1(txt, tokenizer, max_length, stride) #2
     dataloader = DataLoader(
@@ -48,3 +45,8 @@ def create_dataloader_v1(txt, batch_size=4, max_length=256,
 #2 Creates dataset
 #3 drop_last=True drops the last batch if it is shorter than the specified batch_size to prevent loss spikes during training.
 #4 The number of CPU processes to use for preprocessing
+
+
+# there are max_length x tokens in a sequence
+# batch_size x sequences in a batch
+# stride is the number of tokens you shift between consecutive input sequences.
