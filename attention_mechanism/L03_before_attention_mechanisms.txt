@@ -1,0 +1,13 @@
+There used to be RNN's that implemented a encoder-decoder architecture, that were popular for language tasks.
+
+Only problem is that, the hidden states of the RNN's were not able to capture the context of the entire input sequence, especially when the input sequence was long. 
+
+As the encoder reads the sequence, the hidden state of the encoder is updated, but with a long enough input sequence, there would definitely be some loss of information given the limitation of the hidden state.
+
+itna samjha mujhe.
+
+To solve this, the Bahdanau attention mechanism was introduced, specifically to solve this problem for RNN's.
+
+Cut to 3 years later, and it was suddenly realised that RNN's weren't even necessary for these language tasks, and thus the Transformer was introduced, which had a similar encoder-decoder architecture, an attention mechanism heavily inspired by the Bahdanau attention mechanism, but minus the hidden state limitation of RNN's. 
+
+Not sure how this works but yes.

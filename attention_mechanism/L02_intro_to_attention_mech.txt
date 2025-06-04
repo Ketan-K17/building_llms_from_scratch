@@ -1,0 +1,26 @@
+Page 107 onwards.
+
+In very layman terms, an LLM is a function that takes in a text prompt (let it just be text for now) and outputs a response.
+
+How must the LLM achieve this? 
+-> One way is to go across each input token in the prompt, and for each token, it will output a response token.
+
+This doesn't make a lot of sense on multiple levels. 
+    - First, the output cannot always be the same size as the input.
+    - Second, sometimes, you need to know the context around an input token to work ahead (context could include tokens before AND after the current token). You can't be expecting the LLM to read the word 'it' or something and understand what 'it' is referring to, unless it has access to the entire list of input tokens 'selectively'.
+
+The example Sebastian gave is that of a language translator, which felt thoda misleading to me because an LLM is supposed to be capable of much more than that.
+
+
+CLEARLY, going input token to input token, pushing out one output token each time doesn't work well.
+
+We need a way to 'selectively' access the input tokens, as we churn out the output tokens, assessing each time how important each input token is to that one singular output token. This is what the attention mechanism is for.
+
+
+
+
+
+
+
+
+
