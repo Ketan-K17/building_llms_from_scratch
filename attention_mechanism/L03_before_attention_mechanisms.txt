@@ -6,7 +6,7 @@ As the encoder reads the sequence, the hidden state of the encoder is updated, b
 
 itna samjha mujhe.
 
-To solve this, the Bahdanau attention mechanism was introduced, specifically to solve this problem for RNN's.
+To solve this, the Bahdanau attention mechanism was introduced, specifically to solve this problem for RNN's. Seb did not touch upon the Bahdanau attention mechanism in the textbook.
 
 Cut to 3 years later, and it was suddenly realised that RNN's weren't even necessary for these language tasks, and thus the Transformer was introduced, which had a similar encoder-decoder architecture, an attention mechanism heavily inspired by the Bahdanau attention mechanism, but minus the hidden state limitation of RNN's. 
 

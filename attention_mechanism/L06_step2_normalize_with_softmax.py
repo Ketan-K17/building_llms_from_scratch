@@ -1,5 +1,5 @@
 import torch
-from L04_step1_compute_attention_scores import attn_scores_2
+from L05_step1_compute_attention_scores import attn_scores_2
 
 def softmax_naive(x):
     return torch.exp(x) / torch.exp(x).sum(dim=0)
