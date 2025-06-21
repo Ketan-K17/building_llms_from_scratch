@@ -37,3 +37,8 @@ if __name__ == "__main__":
     print(f"value_2: {value_2}")
     print("keys.shape:", keys.shape)
     print("values.shape:", values.shape)
+
+
+    print(f"key weight matrix shape: {W_key.shape}")
+    print(f"value weight matrix shape: {W_value.shape}")
+    print(f"query weight matrix shape: {W_query.shape}")
